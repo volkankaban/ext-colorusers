@@ -1,0 +1,32 @@
+{
+    "name": "Color User",
+    "version": "1.1",
+    "manifest_version": 2,
+    "permissions": [
+        "tabs",
+        "notifications",
+        "http://*/",
+        "https://*/",
+        "storage"
+    ],
+    "background": {
+        "scripts": ["userlist.js"],
+        "persistent": false
+    },
+    "icons": {
+        "16": "icons/logo16.png",
+        "48": "icons/logo48.png",
+        "128": "icons/logo128.png"
+    },
+
+    "content_scripts": [{
+        "matches": ["https://*/*","http://*/*"],
+        "js": ["content.js", "jquery.min.js"],
+        "css": ["user.css"]
+
+    }],
+    "page_action": {
+        "default_icon": "icons/logo128.png",
+        "default_popup": "popup.html"
+    }
+}
