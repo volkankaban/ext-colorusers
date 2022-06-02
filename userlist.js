@@ -5,6 +5,5 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         })
     }
 })
-
 chrome.runtime.sendMessage({todo: 'default'});
 //get matched url's from localstorage to inject dataColor with username elements;
